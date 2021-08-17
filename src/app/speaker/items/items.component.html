@@ -1,0 +1,84 @@
+<div class="BaseBox">
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="card card-sm">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto" *ngIf="showSaveButton">
+                        <button class="btn  btn-lg  btn-success" (click)="saveSpeakers();">SAVE</button>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
+                    </div>
+                    <!--end of col-->
+                    <div class="col">
+                        <input class="form-control form-control-lg form-control-borderless" type="search" #search
+                            placeholder="Search topics or keywords" (keyup.enter)="onSearch()">
+                    </div>
+                    <!--end of col-->
+                    <div class="col-auto">
+                        <button class="btn btn-lg btn-primary" type="submit" (click)="onSearch()">Search</button>
+                    </div>
+                    <!--end of col-->
+                </div>
+            </div>
+        </div>
+        <!--end of col-->
+    </div>
+    <ul>
+        <li class="liBox1" *ngFor="let speaker of (obsSpeakers$ | async) ;index as i;even as isEven;odd as isOdd ">
+            <div class="W100">
+                <div class="liBox2">
+                    <div class="W100 displayflex">
+                        <div [class.iseven]="isEven" [class.isodd]="isOdd" class="liBox3">
+                        </div>
+                        <div class="liBox4">
+                            <button class="buttonBox" (click)="btnClickEvent(speaker,!speaker.ishow)">
+                                <i class="fas" [class.fa-angle-down]="!speaker.ishow"
+                                    [class.fa-angle-up]="speaker.ishow"></i>
+                            </button>
+                        </div>
+                        <div class="liBox5">
+                            <div class="liBox6">
+                                <div style="flex: none;">
+                                </div>
+                                <div class="row W100">
+                                    <div *ngFor="let value of speaker.data" class="liBox7">
+                                        <ng-template #tipContent>
+                                            <p>
+                                                {{obsSpeakerDesc$ | async}}
+                                            </p>
+                                        </ng-template>
+                                        <input type="checkbox" (click)="chk_Select($event,speaker)">
+                                        <span [ngbTooltip]="tipContent" #tooltip="ngbTooltip"
+                                            tooltipClass="tooltipCustom"
+                                            (mouseenter)="toggleWithGreeting(tooltip, speaker)" placement="right">
+
+                                            <div class="liBox8" *ngIf="speaker.isChecked">
+                                                <input type="text" class="form-control form-control-borderless"
+                                                    [value]=" value.value" name="value" [(ngModel)]="value.value">
+                                            </div>
+                                            <span *ngIf="!speaker.isChecked">
+                                                {{value.value}}
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="liBox9" [@openClose]="speaker.ishow ? true : false">
+                                <ng-template #sideDetail [ngIf]="speaker.ishow">
+                                    <app-side-detail [sesstion]="speaker.links" [isShow]=speaker.ishow>
+                                    </app-side-detail>
+                                </ng-template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>

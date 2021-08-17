@@ -1,0 +1,103 @@
+.iseven {
+  background-color: rgb(252, 76, 2);
+}
+
+.isodd {
+  background-color: rgb(0, 34, 68);
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+
+.displayflex {
+  display: flex;
+}
+.bd-example{
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border: solid #dee2e6;
+}
+.BaseBox{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.liBox1 {
+  min-height: 0px;
+  -webkit-animation: fade-in-down 0.3s;
+  animation: fade-in-down 0.3s;
+}
+.liBox2 {
+  overflow: hidden;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0 2px 9px 0 rgb(0 0 0 / 8%), 0 0 1px 0 rgb(0 0 0 / 20%);
+  border-radius: 8px;
+}
+
+.liBox3 {
+  padding-right: 5px;
+  padding-left: 5px;
+  height: 100%;
+  flex: none;
+}
+
+.liBox4 {
+  margin-top: 24px;
+  margin-left: 20px;
+}
+
+.buttonBox {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.liBox5 {
+  width: 100%;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 5px;
+}
+
+.liBox6 {
+  display: flex;
+  padding-top: 17px;
+}
+
+.liBox7 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.liBox8 {
+  padding-left: 5px;
+  display: inline-block;
+  width: 98%;
+}
+
+.liBox9 {
+  width: 100%;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}

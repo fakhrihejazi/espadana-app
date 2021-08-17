@@ -1,0 +1,48 @@
+.side-ditail {
+  vertical-align: top;
+  flex-wrap: wrap;
+  flex-basis: 40%;
+  flex-shrink: 1;
+}
+
+.side-li {
+  margin-left: 60px;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.box {
+  transition: box-shadow .3s;  
+  margin: 15px;
+  border-radius:10px;
+  border: 1px solid #ccc;
+  background: #fff;
+ 
+  
+}
+
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+/* .side-detail{
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1001;
+}
+
+.side-detail .side-detail-overlay {
+    background: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 100%;
+}
+
+.side-detail-collapsed{
+    visibility: collapse !important;
+}
+
+.side-detail-overlay-collapsed{
+    background: transparent !important;
+} */

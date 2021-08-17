@@ -1,0 +1,15 @@
+<div class="W100 H100" style="min-height: 50px;">
+    <div class="side-ditail">
+        <div class="side-li box p-2"  *ngFor="let item of dataSesstion">
+            <div *ngFor="let data of item.data" class="pt-1">              
+                   <span>
+                    <strong>
+                        {{data.name }}
+                    </strong>
+                    : {{data.value}}</span>  
+            </div>
+            <!-- <hr> -->
+        </div>
+
+    </div>
+</div>

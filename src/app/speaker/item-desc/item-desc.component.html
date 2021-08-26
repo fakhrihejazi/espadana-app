@@ -1,0 +1,27 @@
+<div *ngIf="speaker">
+    <ng-template #tipContent>
+        <p>
+            {{obsSpeakerDesc$ | async}}
+        </p>
+    </ng-template>
+    <div *ngFor="let data of speaker.data">
+        <input type="checkbox" (click)="chk_Select($event)">
+        <span [ngbTooltip]="tipContent" #tooltip="ngbTooltip" tooltipClass="tooltipCustom"
+            (mouseenter)="toggleWithGreeting(tooltip, speaker)" placement="right">
+            <div [ngStyle]="{'display': !speaker.isChecked ?'none':'block'}">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <button class="btn btn-sm btn-success" #btnSave>Save</button>
+                    </div>
+                    <div class="col" *ngIf="speaker.isChecked">
+                        <input type="text" class="form-control form-control-borderless" [value]=" data.value"
+                            name="value" [(ngModel)]="data.value">
+                    </div>
+                </div>
+            </div>
+            <span *ngIf="!speaker.isChecked">
+                {{data.value}}
+            </span>
+        </span>
+    </div>
+</div>

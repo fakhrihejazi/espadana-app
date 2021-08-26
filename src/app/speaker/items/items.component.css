@@ -1,10 +1,10 @@
-.iseven {
+/* .iseven {
   background-color: rgb(252, 76, 2);
 }
 
 .isodd {
   background-color: rgb(0, 34, 68);
-}
+} */
 
 li {
   display: list-item;
@@ -19,9 +19,6 @@ ul {
 }
 
 
-.displayflex {
-  display: flex;
-}
 .bd-example{
     padding: 1.5rem;
     margin-right: 0;
@@ -40,7 +37,7 @@ ul {
   -webkit-animation: fade-in-down 0.3s;
   animation: fade-in-down 0.3s;
 }
-.liBox2 {
+/* .liBox2 {
   overflow: hidden;
   margin-top: 15px;
   margin-right: auto;
@@ -49,9 +46,9 @@ ul {
   display: flex;
   box-shadow: 0 2px 9px 0 rgb(0 0 0 / 8%), 0 0 1px 0 rgb(0 0 0 / 20%);
   border-radius: 8px;
-}
+} */
 
-.liBox3 {
+/* .liBox3 {
   padding-right: 5px;
   padding-left: 5px;
   height: 100%;
@@ -61,15 +58,15 @@ ul {
 .liBox4 {
   margin-top: 24px;
   margin-left: 20px;
-}
+} */
 
-.buttonBox {
+/* .buttonBox {
   border: none;
   cursor: pointer;
   background-color: transparent;
-}
+} */
 
-.liBox5 {
+/* .liBox5 {
   width: 100%;
   padding-bottom: 12px;
   padding-top: 12px;
@@ -100,4 +97,4 @@ ul {
   justify-content: space-between;
   align-items: flex-start;
   display: flex;
-}
+} */

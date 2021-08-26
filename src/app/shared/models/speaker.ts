@@ -1,15 +1,21 @@
-export interface Data {
+export interface IData {
   name: string;
   value: string;
 }
 
-export interface Link {
+export interface ILink {
   rel: string;
   href: string;
 }
 
-export interface Speaker {
+export interface ISpeaker {
   href: string;
-  data: Data[];
-  links: Link[];
+  data: IData[];
+  links: ILink[];
 }
+
+export interface ISpeakerShow extends ISpeaker {
+  ishow: boolean | false;
+  isChecked: boolean | false;
+}
+
